@@ -10,7 +10,6 @@ function format(stringDigits,tempArray,i){
     var temp = '';
     stringDigits.forEach(function(item){
         temp += item[i]+' ';
-
     });
     tempArray.push(temp);
 }
