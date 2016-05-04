@@ -10,8 +10,6 @@ function isExist(element,allStringDigits,stringDigits){
     allStringDigits.forEach(function(item){
         if(item.digit === element)
             stringDigits.push(item.string);
-
     });
-
 }
 module.exports = digitsTransform;
