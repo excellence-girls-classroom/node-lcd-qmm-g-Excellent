@@ -79,7 +79,6 @@ module.exports = {
     buildStringDigits:buildStringDigits,
     toString:toString,
     lcdDigits:lcdDigits
-
 }
 
 
