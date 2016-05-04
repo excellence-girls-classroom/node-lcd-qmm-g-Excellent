@@ -5,7 +5,6 @@ function IcdDigits (inputs) {
     var digitsTransform = require('./digitsTransform');
     var buildStringDigits = require('./buildStringDigits');
     var toString = require('./toString');
-
     var digits = getDigit(inputs);
     var allStringDigits = wholeStringDigits();
     var stringDigits = digitsTransform(digits, allStringDigits);
