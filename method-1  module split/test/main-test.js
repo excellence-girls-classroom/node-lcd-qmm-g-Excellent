@@ -31,10 +31,8 @@ describe(' buildStringDigits()', function () {
         var tempArray = buildStringDigits(stringDigits);
         var expectTempArray = ['._. ._. ', '._| |.| ', '|_. |_| '];
         expect(tempArray).toEqual(expectTempArray);
-
     });
 });
-
 
 describe(' IcdDigits()', function () {
     var inputs = 20;
@@ -42,9 +40,8 @@ describe(' IcdDigits()', function () {
         spyOn(console, 'log');
         IcdDigits(inputs);
         var expectResult = '\n' + '._.' + ' ' + '._.' + ' ' + '\n'
-            + '._|' + ' ' + '|.|' + ' ' + '\n'
-            + '|_.' + ' ' + '|_|' + ' ' + '\n';
-
+                                + '._|' + ' ' + '|.|' + ' ' + '\n'
+                                + '|_.' + ' ' + '|_|' + ' ' + '\n';
         expect(console.log).toHaveBeenCalledWith(expectResult);
     });
 });

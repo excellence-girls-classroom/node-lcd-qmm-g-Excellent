@@ -1,6 +1,5 @@
 var temp = require('../main/main');
 var lcd = new temp();
-
 describe('getDigit()', function() {
    var inputs  = 123;
    it('should print correct digits', function() {
@@ -27,10 +26,8 @@ describe(' buildStringDigits()',function(){
         var tempArray = lcd.buildStringDigits(stringDigits);
         var expectTempArray = ['._. ._. ','._| |.| ','|_. |_| '];
         expect(tempArray).toEqual(expectTempArray);
-
     });
 });
-
 
 describe(' lcdDigits()',function(){
      var inputs  = 20;

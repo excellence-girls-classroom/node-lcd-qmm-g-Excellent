@@ -36,9 +36,7 @@ function isExist(element,allStringDigits,stringDigits){
        allStringDigits.forEach(function(item){
          if(item.digit === element)
            stringDigits.push(item.string);
-        
-    });   
-    
+    });
 }
 
 function buildStringDigits(stringDigits){
@@ -57,7 +55,6 @@ function print(stringDigits,tempArray,i){
      tempArray.push(temp);
 }
 
-
 function toString(tempArray){
     var string = '\n';
     tempArray.forEach(function(element){
@@ -74,7 +71,6 @@ function lcdDigits(inputs){
     var string = toString(tempArray);
     console.log(string);
 }
-
 
 exports.digits = getDigit;
 exports.singalDigit = digitsTransform;
