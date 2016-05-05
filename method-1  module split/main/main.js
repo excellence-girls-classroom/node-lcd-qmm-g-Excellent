@@ -10,7 +10,6 @@ function IcdDigits (inputs) {
     var stringDigits = digitsTransform(digits, allStringDigits);
     var tempArray = buildStringDigits(stringDigits);
     var string = toString(tempArray);
-    // console.log(string);
     return string;
 }
 module.exports = IcdDigits ;
