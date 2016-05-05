@@ -2,7 +2,7 @@ function getDigit(inputs) {
     var digits = [];
     for (var i = 0; inputs != 0; i++) {
         digits[i] = inputs % 10;
-        inputs = Math.floor(inputs/10);
+        inputs = Math.floor(inputs / 10);
     }
     digits.reverse();
     return digits;
@@ -24,61 +24,61 @@ function wholeStringDigits() {
     return allStringDigits;
 }
 
-function digitsTransform(digits,allStringDigits){
+function digitsTransform(digits, allStringDigits) {
     var stringDigits = [];
-    digits.forEach(function(element){
-       isExist(element,allStringDigits,stringDigits); 
+    digits.forEach(function (element) {
+        isExist(element, allStringDigits, stringDigits);
     });
     return stringDigits;
 }
 
-function isExist(element,allStringDigits,stringDigits){
-       allStringDigits.forEach(function(item){
-         if(item.digit === element)
-           stringDigits.push(item.string);
+function isExist(element, allStringDigits, stringDigits) {
+    allStringDigits.forEach(function (item) {
+        if (item.digit === element)
+            stringDigits.push(item.string);
     });
 }
 
-function buildStringDigits(stringDigits){
+function buildStringDigits(stringDigits) {
     var tempArray = [];
-    for(var i = 0; i < 3; i++){
-     print(stringDigits,tempArray,i);
-   }
-   return tempArray;
+    for (var i = 0; i < 3; i++) {
+        print(stringDigits, tempArray, i);
+    }
+    return tempArray;
 }
 
-function print(stringDigits,tempArray,i){
+function print(stringDigits, tempArray, i) {
     var temp = '';
-    stringDigits.forEach(function(item){
-       temp += item[i]+' ';
+    stringDigits.forEach(function (item) {
+        temp += item[i] + ' ';
     });
-     tempArray.push(temp);
+    tempArray.push(temp);
 }
 
-function toString(tempArray){
+function toString(tempArray) {
     var string = '\n';
-    tempArray.forEach(function(element){
+    tempArray.forEach(function (element) {
         string += element + '\n';
     });
     return string;
 }
 
-function lcdDigits(inputs){
+function lcdDigits(inputs) {
     var digits = getDigit(inputs);
     var allStringDigits = wholeStringDigits();
-    var stringDigits = digitsTransform(digits,allStringDigits);
-    var tempArray =  buildStringDigits(stringDigits);
+    var stringDigits = digitsTransform(digits, allStringDigits);
+    var tempArray = buildStringDigits(stringDigits);
     var string = toString(tempArray);
     console.log(string);
 }
 
 module.exports = {
     Digit: getDigit,
-    wholeStringDigits:wholeStringDigits,
-    digitsTransform:digitsTransform,
-    buildStringDigits:buildStringDigits,
-    toString:toString,
-    lcdDigits:lcdDigits
+    wholeStringDigits: wholeStringDigits,
+    digitsTransform: digitsTransform,
+    buildStringDigits: buildStringDigits,
+    toString: toString,
+    lcdDigits: lcdDigits
 }
 
 
